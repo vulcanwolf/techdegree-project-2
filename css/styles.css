@@ -1,0 +1,210 @@
+/*Global Page Styles & Clearfix*/
+*{
+  box-sizing: border-box;
+  font-family: 'Grandstander', cursive;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  padding: 1em;
+}
+
+img{
+  max-width: 100%;
+}
+
+.top-nav h1{
+  font-family: 'Lobster', cursive;
+}
+/*Navigation Menus Styles*/
+nav{
+  text-align: center;
+}
+
+nav a{
+  text-decoration: none;
+  padding: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
+}
+
+.footer-nav a{
+  text-decoration: none;
+  color: black;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li{
+    margin-bottom: 2em;
+}
+
+/*Header Image & Paragraph*/
+.header{
+  text-align: center;
+  line-height: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 4em;
+}
+
+/*Portfolio Title*/
+.portfolio-title{
+  margin-bottom: 3em;
+}
+
+/*Main Content Area, Projects*/
+main{
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.projects{
+  margin-top: 2em;
+  line-height: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/*Footer, Contact Area, Bottom Navigation(s)*/
+footer{
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  line-height: 2em;
+  border-bottom: 1px solid lightgrey;
+}
+
+footer span{
+  font-weight: bold;
+}
+
+/*Hidden Nav, only viewable past at 768px + */
+.nav-big{
+  display: none;
+}
+
+.nav-small .lefty{
+  float: left;
+}
+
+.righty{
+  float: right;
+}
+
+/*Media Queries: Tablet And Monitor*/
+@media(min-width:768px){
+  .top-nav li{
+    display: inline-block;
+    margin-left: 1.5em;
+  }
+  .portfolio-title{
+    margin-top: 6em;
+    margin-bottom: 1em;
+  }
+  .header img{
+    float: right;
+    padding-left: 2em;
+  }
+  main .projects{
+    /*float: left;*/
+    /*Floats seem to be less effective on bigger layouts, I noticed at
+    certain pixel ranges that my projects layout was breaking and not aligning
+    properly. This forced me to use inline-block with vertical alignment instead*/
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .nav-small{
+    display: none;
+  }
+  .bot-nav{
+    float: right;
+  }
+  .nav-big{
+    display: block;
+  }
+  .bot-nav li{
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 2em;
+  }
+  .footer-nav .student-name{
+    float: left;
+  }
+}
+
+@media(min-width: 1024px){
+  .top-nav .student-name{
+    float: left;
+  }
+  .header{
+    text-align: left;
+    border-bottom: 2px solid lightgrey;
+    padding-bottom: 2em;
+  }
+
+  .hi{
+    font-family: 'Lobster';
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .dev{
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .wrapper{
+    box-shadow:  2px 2px  5px 2px lightgrey, -2px -2px 5px 2px lightgrey;
+    background-color: white;
+  }
+   main .projects{
+    width: 33%;
+  }
+
+  body{
+    padding-top: 100px;
+    background-color: #f0ece2;
+  }
+  .top-nav{
+    position:fixed;
+    width: 100%;
+    background: lightgrey;
+    top:0;
+    background-color: black;
+  }
+  .top-nav ul{
+    float: right;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: -20px;
+    margin-right: 45px;
+  }
+  .top-nav a{
+    color: white;
+  }
+  .top-nav h1{
+    margin: 0;
+    margin-top: 7px;
+    margin-left: 45px;
+    color:white;
+  }
+  .nav-big{
+    border-top: 1px solid darkgrey;
+  }
+  nav a:hover{
+    color: yellow;
+    transition: 1.5s;
+  }
+}
